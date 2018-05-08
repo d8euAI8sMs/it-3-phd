@@ -1,0 +1,16 @@
+version: '{build}'
+
+image:
+  - Visual Studio 2013
+  
+environment:
+  project_name: phd
+
+configuration:
+  - Release
+
+build:
+  project: src\%project_name%.sln
+
+artifacts:
+  - path: 'src\%CONFIGURATION%\%project_name%.exe'
